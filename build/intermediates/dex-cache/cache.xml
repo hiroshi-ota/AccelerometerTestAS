@@ -2,7 +2,7 @@
 <pre-dex-items>
 
     <item
-        dex="C:\Users\Kamil\AndroidstudioProjects\AccelerometerTest\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-b44f916b8e845d83471adb51944f072da4cdc8c6.jar"
+        dex="C:\Users\Kamil\Documents\GitHub\AccelerometerTestAS\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-b44f916b8e845d83471adb51944f072da4cdc8c6.jar"
         jar="D:\Programowanie\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="20.0.0"

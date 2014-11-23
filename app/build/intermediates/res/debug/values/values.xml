@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Kamil/AndroidstudioProjects/AccelerometerTest/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/Kamil/Documents/GitHub/AccelerometerTestAS/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/Kamil/AndroidstudioProjects/AccelerometerTest/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Kamil/Documents/GitHub/AccelerometerTestAS/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">AccelerometerTest</string>
     <string name="delGData">Delete data</string>
     <string name="hello_world">Test Akcelerometru!</string>
     <string name="list_name">List of records</string>
-    <!-- From: file:/C:/Users/Kamil/AndroidstudioProjects/AccelerometerTest/app/src/main/res/values/styles.xml -->
+    <string name="wait">Wait for your data...</string>
+    <!-- From: file:/C:/Users/Kamil/Documents/GitHub/AccelerometerTestAS/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

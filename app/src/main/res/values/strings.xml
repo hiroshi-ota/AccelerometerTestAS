@@ -6,6 +6,7 @@
     <string name="hello_world">Test Akcelerometru!</string>
     <string name="action_settings">Settings</string>
     <string name="delGData">Delete data</string>
+    <string name="wait">Wait for your data...</string>
     
 
 </resources>

@@ -48,7 +48,7 @@ public class DbAdapter extends SQLiteOpenHelper{
 	public void delGData(){
 		SQLiteDatabase db = getWritableDatabase();
 		db.execSQL("DELETE FROM g_data");
-		db.execSQL("delete from sqlite_sequence where name='g_data'"); // rozpoczyna autoinkrementacjê od nowa!
+		db.execSQL("delete from sqlite_sequence where name='g_data'"); // rozpoczyna autoinkrementacjÄ™ od nowa!
 		//resetGData(1);
 	}
 
