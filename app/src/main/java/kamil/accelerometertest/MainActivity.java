@@ -62,7 +62,7 @@ public class MainActivity extends Activity implements SensorEventListener{
         }
         
         if (id == R.id.action_data_list){
-        Intent getData = new Intent(getApplicationContext(), DataActivity.class);
+        Intent getData = new Intent(getApplicationContext(), LoadingScreen.class);
         startActivity(getData);
         }
         
