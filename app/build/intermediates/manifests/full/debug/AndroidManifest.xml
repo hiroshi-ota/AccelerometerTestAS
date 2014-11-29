@@ -26,6 +26,9 @@
             android:name="kamil.accelerometertest.DataActivity"
             android:label="@string/list_name" >
         </activity>
+        <activity
+            android:name="kamil.accelerometertest.LoadingScreen"
+            android:label="Loading Screen" />
     </application>
 
 </manifest>

@@ -28,6 +28,9 @@
             android:label="@string/list_name">
             
         </activity>
+
+        <activity android:name=".LoadingScreen"
+                  android:label="Loading Screen"></activity>
         
     </application>
 

@@ -1,28 +1,35 @@
 package kamil.accelerometertest;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.util.logging.Handler;
+
 
 public class DataActivity extends Activity {
 	
-	int i = 0;
+	int count = 0;
 	
 	TextView lista;
 	
 	DbAdapter dbAdapter = new DbAdapter(this);
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.data_activity);
+
+
 		
 		lista = (TextView) findViewById(R.id.lista);
-		
+
 		
 		Cursor k = dbAdapter.getGData();
         while(k.moveToNext()){

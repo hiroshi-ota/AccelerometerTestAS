@@ -1,5 +1,7 @@
 package kamil.accelerometertest;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
@@ -26,6 +28,7 @@ public class MainActivity extends Activity implements SensorEventListener{
 	private float AccelLast;
 		
 	DbAdapter dbAdapter = new DbAdapter(this);
+
 	
 	
     @Override
@@ -62,8 +65,10 @@ public class MainActivity extends Activity implements SensorEventListener{
         }
         
         if (id == R.id.action_data_list){
-        Intent getData = new Intent(getApplicationContext(), LoadingScreen.class);
-        startActivity(getData);
+//        Intent getData = new Intent(getApplicationContext(), DataActivity.class);
+        Intent getLoad = new Intent(getApplicationContext(), LoadingScreen.class);
+//        startActivity(getData);
+        startActivity(getLoad);
         }
         
         return super.onOptionsItemSelected(item);
@@ -79,7 +84,7 @@ public class MainActivity extends Activity implements SensorEventListener{
     }
 
 	@Override
-	public void onSensorChanged(SensorEvent event) {		
+	public void onSensorChanged(SensorEvent event) {
 		
 		int i;
 		
@@ -121,16 +126,19 @@ public class MainActivity extends Activity implements SensorEventListener{
 		
 		wyjscie.setText(wyniki);
 		
-				
-		
+
+
+
 		if((Math.round(AccelCurent)) > 1){
-			
+
 			Calendar c = Calendar.getInstance();
 			String curent_date = c.getTime().toString();
+
+
 			
 			dbAdapter.setGData(curent_date, (Math.round(AccelCurent)));
 		}
-		
+
 	}
 	
 	

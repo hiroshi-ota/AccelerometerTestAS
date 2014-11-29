@@ -52,6 +52,11 @@ public class DbAdapter extends SQLiteOpenHelper{
 		//resetGData(1);
 	}
 
+    public void howLong(){
+        SQLiteDatabase db = getReadableDatabase();
+        System.out.println("coś");
+    }
+
 	
 
 }
