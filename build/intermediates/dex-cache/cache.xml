@@ -2,8 +2,8 @@
 <pre-dex-items>
 
     <item
-        dex="C:\Users\Kamil\Documents\GitHub\AccelerometerTestAS\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-1963987fcd31e8f90c9fb843616c9db24e3bc8d8.jar"
-        jar="D:\Programowanie\AndroidSDK\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        dex="C:\Users\Kamil\Documents\GitHub\AccelerometerTestAS\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-91c7190753a29666386d65d596a3773a138c146f.jar"
+        jar="D:\Android\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
