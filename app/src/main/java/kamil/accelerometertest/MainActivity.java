@@ -1,10 +1,6 @@
 package kamil.accelerometertest;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
-
 import android.app.Activity;
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -12,10 +8,11 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-
+import java.lang.System;
 
 public class MainActivity extends Activity implements SensorEventListener{
 
@@ -26,6 +23,13 @@ public class MainActivity extends Activity implements SensorEventListener{
 	private float Accel;
 	private float AccelCurent;
 	private float AccelLast;
+
+    private long startTime;
+    private long stopTime;
+    private double currentEventTime;
+    private int G;
+    private int AccelNow;
+
 		
 	DbAdapter dbAdapter = new DbAdapter(this);
 
@@ -119,25 +123,39 @@ public class MainActivity extends Activity implements SensorEventListener{
 			wyniki.append("\n");
 			
 		}
-		
+
+        G = (Math.round(AccelCurent));
+
 		wyniki.append("\n");
-		wyniki.append("G= " + Math.round(AccelCurent));
+		wyniki.append("G= " + G);
 
 		
 		wyjscie.setText(wyniki);
-		
 
 
+		if(G > 1) {
+            AccelNow = G;
+            startTime = (System.currentTimeMillis());
+            System.out.println("Start: " + startTime);
+        }
 
-		if((Math.round(AccelCurent)) > 1){
 
-			Calendar c = Calendar.getInstance();
-			String curent_date = c.getTime().toString();
+        if(G < AccelNow) {
+            stopTime = (System.currentTimeMillis());
+            System.out.println("Stop: " + stopTime);
 
+            currentEventTime = ((stopTime - startTime)/1000.0);
+            System.out.println(currentEventTime);
+            AccelNow = 0;
+        }
 
-			
-			dbAdapter.setGData(curent_date, (Math.round(AccelCurent)));
-		}
+        if (currentEventTime > 0.1) {
+            Calendar c = Calendar.getInstance();
+            String current_date = c.getTime().toString();
+
+            dbAdapter.setGData(current_date, G);
+        }
+
 
 	}
 	
